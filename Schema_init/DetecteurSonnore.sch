@@ -4412,6 +4412,39 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="supply2">
+<description>&lt;b&gt;Supply Symbols&lt;/b&gt;&lt;p&gt;
+GND, VCC, 0V, +5V, -5V, etc.&lt;p&gt;
+Please keep in mind, that these devices are necessary for the
+automatic wiring of the supply signals.&lt;p&gt;
+The pin name defined in the symbol is identical to the net which is to be wired automatically.&lt;p&gt;
+In this library the device names are the same as the pin names of the symbols, therefore the correct signal names appear next to the supply symbols in the schematic.&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+</packages>
+<symbols>
+<symbol name="VDD">
+<circle x="0" y="1.27" radius="1.27" width="0.254" layer="94"/>
+<text x="-1.905" y="3.175" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="VDD" x="0" y="-2.54" visible="off" length="short" direction="sup" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VDD" prefix="SUPPLY">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VDD" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -4437,6 +4470,7 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <part name="D3" library="eagle-ltspice" deviceset="DIODE_E-" device="DO35-7"/>
 <part name="BUZZER" library="buzzer" deviceset="F/CM12P" device=""/>
 <part name="AGND1" library="supply1" deviceset="AGND" device=""/>
+<part name="SUPPLY1" library="supply2" deviceset="VDD" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -4459,7 +4493,8 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <instance part="U$1" gate="G$1" x="114.3" y="38.1"/>
 <instance part="D3" gate="G$1" x="83.82" y="76.2" rot="R90"/>
 <instance part="BUZZER" gate="G$1" x="5.08" y="53.34" rot="R90"/>
-<instance part="AGND1" gate="VR1" x="15.24" y="68.58" rot="R180"/>
+<instance part="AGND1" gate="VR1" x="12.7" y="68.58" rot="R270"/>
+<instance part="SUPPLY1" gate="G$1" x="12.7" y="76.2" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -4529,29 +4564,19 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <wire x1="30.48" y1="50.8" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$11" class="0">
-<segment>
-<pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="D3" gate="G$1" pin="C"/>
-<wire x1="38.1" y1="73.66" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="76.2" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="38.1" y1="76.2" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
-<junction x="38.1" y="76.2"/>
-<wire x1="15.24" y1="76.2" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="BUZZER" gate="G$1" pin="1"/>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="7.62" y1="50.8" x2="17.78" y2="50.8" width="0.1524" layer="91"/>
+<junction x="7.62" y="50.8"/>
 </segment>
 </net>
 <net name="AGND" class="0">
 <segment>
 <pinref part="D4" gate="G$1" pin="A"/>
 <wire x1="17.78" y1="60.96" x2="15.24" y2="60.96" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="60.96" x2="15.24" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="60.96" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="35.56" x2="38.1" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="Q2" gate="G$1" pin="E"/>
 <wire x1="38.1" y1="35.56" x2="55.88" y2="35.56" width="0.1524" layer="91"/>
@@ -4573,7 +4598,21 @@ diameter 2 mm, horizontal, grid 7.62 mm</description>
 <wire x1="7.62" y1="58.42" x2="15.24" y2="58.42" width="0.1524" layer="91"/>
 <junction x="15.24" y="58.42"/>
 <pinref part="AGND1" gate="VR1" pin="AGND"/>
-<junction x="15.24" y="66.04"/>
+<junction x="15.24" y="68.58"/>
+<pinref part="BUZZER" gate="G$1" pin="2"/>
+<junction x="7.62" y="58.42"/>
+</segment>
+</net>
+<net name="VDD" class="0">
+<segment>
+<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="D3" gate="G$1" pin="C"/>
+<wire x1="38.1" y1="73.66" x2="38.1" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="76.2" x2="81.28" y2="76.2" width="0.1524" layer="91"/>
+<wire x1="38.1" y1="76.2" x2="15.24" y2="76.2" width="0.1524" layer="91"/>
+<junction x="38.1" y="76.2"/>
+<pinref part="SUPPLY1" gate="G$1" pin="VDD"/>
+<junction x="15.24" y="76.2"/>
 </segment>
 </net>
 </nets>
