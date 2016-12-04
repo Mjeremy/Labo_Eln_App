@@ -15,10 +15,11 @@ L'objectif de ce projet était de réaliser un circuit électronique du début �
 Le sujet initial consistait donc à détecter la sonnerie d'un réveil. Le schéma du circuit que nous avions récupéré utilisait donc un réveil. Voici le schéma : 
 
 \begin{figure}[H]\centering
-\includegraphics[width=1\textwidth]{ressources/schema_init}
-\caption{Schéma initial}\end{figure}
+\includegraphics[width=1\textwidth]{ressources/schema_initTransdu}
+\caption{Schéma initial}
+\label{schemaInit}\end{figure}
 
-Nous pouvons observé que ce circuit est relié au transducteur du réveil. Cet élément permet de transformer en ondes sonores les impulsions électriques venant du réveil. Le principe initial était donc d'aller récupérer ces impulsions électriques sur le transducteur afin de pouvoir allumer la LED. 
+Nous pouvons observé que ce circuit est relié au transducteur (élement encadré) du réveil. Cet élément permet de transformer en ondes sonores les impulsions électriques venant du réveil. Le principe initial était donc d'aller récupérer ces impulsions électriques sur le transducteur afin de pouvoir allumer la LED. 
 N'ayant pas de réveil en notre possession nous avons décidé d'opter pour une solution alternative dans laquelle nous n'avions pas besoin du transducteur. L'idée était de remplacer le réveil par un buzzer.
 
 \chapter{Test du circuit sur breadboard}
@@ -27,10 +28,12 @@ Lorsque notre choix fut confirmé, nous avons du tester le circuit choisi sur un
 
 Nous avons donc commencé par nous procurer les différents composants dont on avait besoin. Ensuite nous avons reproduit le schéma initial sur la breadboard.
 
-Lorsque que cette étape fut terminée, nous avons testé le circuit. Malheureusement un problème c'est présenté. En effet, l'idée que nous avions de remplacer le transducteur par un simple buzzer n'était pas aboutie parfaitement. Nous avons donc cherché la provenance du problème et après réflexion nous en sommes venus à la conclusion suivante. Afin que le buzzer puisse remplacer correctement le transducteur du réveil, celui-ci devait se voir fournir une alimentation supplémentaire à celle fournie au circuit électrique. Pour que le buzzer ne soit pas activé en permanence, nous avons également ajouté un interrupteur entre l'alimentation et le buzzer. Voici le circuit final réalisé sur la breadboard : 
+Lorsque que cette étape fut terminée, nous avons testé le circuit. Malheureusement un problème c'est présenté. En effet, l'idée que nous avions de remplacer le transducteur par un simple buzzer n'était pas aboutie parfaitement. 
+
+Nous avons donc cherché la provenance du problème et après réflexion nous en sommes venus à la conclusion suivante. Afin que le buzzer puisse remplacer correctement le transducteur du réveil, celui-ci devait se voir fournir une alimentation supplémentaire à celle fournie au circuit électrique. Pour que le buzzer ne soit pas activé en permanence, nous avons également ajouté un interrupteur entre l'alimentation et le buzzer. Voici le circuit final réalisé sur la breadboard : 
 
 \begin{figure}[H]\centering
-\includegraphics[width=0.7\textwidth]{ressources/breadboard}
+\includegraphics[width=0.7\textwidth]{ressources/breadboardElement}
 \caption{Circuit sur breadboard}\end{figure}
 
 \chapter{Conception du schéma}
