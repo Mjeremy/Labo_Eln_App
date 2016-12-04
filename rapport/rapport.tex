@@ -1,0 +1,38 @@
+%\documentclass[11pt]{article}
+
+\input{config}
+\input{config_pageGarde}
+\title{Rapport }
+\begin{document}
+\input{PageGarde}
+
+\chapter{Objectif \& description} 
+
+L'objectif de ce projet était de réaliser un circuit électronique du début à la fin. Nous avons commencé par choisir un sujet et avons opté pour un détecteur de sonnerie réveil. Ce circuit électronique allait donc être capable de détecter une sonnerie et faire clignoter une LED au même rythme. Nous avons ensuite du concevoir le schéma du circuit grâce au logiciel Eagle, le tester sur breadboard pour enfin pouvoir le réaliser sur une carte imprimée.
+
+\section{Sujet initial}
+
+Le sujet initial consistait donc à détecter la sonnerie d'un réveil. Le schéma du circuit que nous avions récupéré utilisait donc un réveil. Voici le schéma : 
+
+\begin{figure}[H]\centering
+\includegraphics[width=1\textwidth]{ressources/schema_init}
+\caption{Schéma initial}\end{figure}
+
+Nous pouvons observé que ce circuit est relié au transducteur du réveil. Cet élément permet de transformer en ondes sonores les impulsions électriques venant du réveil. Le principe initial était donc d'aller récupérer ces impulsions électriques sur le transducteur afin de pouvoir allumer la LED. 
+N'ayant pas de réveil en notre possession nous avons décidé d'opter pour une solution alternative dans laquelle nous n'avions pas besoin du transducteur. L'idée était de remplacer le réveil par un buzzer.
+
+\chapter{Conception du schéma}
+
+Afin de concevoir le schéma électronique de notre circuit nous avons utilisé le logiciel Eagle. Nous avons donc commencé par prendre en main ce logiciel et ensuite créé le schéma.  Etant donné que Eagle nous produira le schéma qui sera imprimé sur la carte, il était donc important de choisir les bons composants. Ce n'était pas la résistivité de ceux-ci à laquelle il fallait faire attention mais bien aux dimensions. Nous avons donc créé le schéma de notre circuit électrique en prenant en compte les dimensions de chaque composants. Voici le schéma que nous avons réalisé : 
+
+
+\begin{figure}[H]\centering
+\includegraphics[width=1\textwidth]{ressources/schema_buz}
+\caption{Schéma avec buzzer}\end{figure}
+
+
+
+\end{document}
+
+
+
