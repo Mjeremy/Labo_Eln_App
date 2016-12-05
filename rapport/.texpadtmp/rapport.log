@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  5 DEC 2016 21:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.10)  5 DEC 2016 22:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1808,7 +1808,7 @@ Package pdftex.def Info: ressources/schema_initTransdu.png used on input line 19
 
  <./ressources/schema_initTransdu.png>]
 Chapitre 2.
-<ressources/breadboardElement.jpg, id=55, 739.76375pt x 498.86375pt>
+<ressources/breadboardElement.jpg, id=54, 739.76375pt x 498.86375pt>
 File: ressources/breadboardElement.jpg Graphic file (type jpg)
  <use ressources/breadboardElement.jpg>
 Package pdftex.def Info: ressources/breadboardElement.jpg used on input line 39.
@@ -1817,7 +1817,7 @@ Package pdftex.def Info: ressources/breadboardElement.jpg used on input line 39.
 
  <./ressources/breadboardElement.jpg>]
 Chapitre 3.
-<ressources/schema_final.png, id=62, 1084.05pt x 493.845pt>
+<ressources/schema_final.png, id=61, 1084.05pt x 493.845pt>
 File: ressources/schema_final.png Graphic file (type png)
  <use ressources/schema_final.png>
 Package pdftex.def Info: ressources/schema_final.png used on input line 52.
@@ -1847,38 +1847,48 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 59.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [4
 
- <./ressources/schema_final.png>]
+ <./ressources/schema_final.png>] <ressources/roleDiodeD1.png, id=73, 1084.05pt x 493.845pt>
+File: ressources/roleDiodeD1.png Graphic file (type png)
+ <use ressources/roleDiodeD1.png>
+Package pdftex.def Info: ressources/roleDiodeD1.png used on input line 77.
+(pdftex.def)             Requested size: 483.69684pt x 220.35185pt.
+ <ressources/roleDiodeD2.png, id=74, 1084.05pt x 493.845pt>
+File: ressources/roleDiodeD2.png Graphic file (type png)
+ <use ressources/roleDiodeD2.png>
+Package pdftex.def Info: ressources/roleDiodeD2.png used on input line 86.
+(pdftex.def)             Requested size: 483.69684pt x 220.35185pt.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
+[5 <./ressources/roleDiodeD1.png> <./ressources/roleDiodeD2.png>] [6]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
  (/Users/alexisgramaglia/Desktop/ECOLE/ECOLE/ISIB/Passerelle/SYNTHESE/LABO_ELN_APP/rapport/.texpadtmp/rapport.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 82.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 100.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 82.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
  ) 
 Here is how much of TeX's memory you used:
- 34427 strings out of 493013
- 651949 string characters out of 6133342
- 746243 words of memory out of 5000000
- 37381 multiletter control sequences out of 15000+600000
- 67616 words of font info for 69 fonts, out of 8000000 for 9000
+ 34452 strings out of 493013
+ 652455 string characters out of 6133342
+ 746191 words of memory out of 5000000
+ 37399 multiletter control sequences out of 15000+600000
+ 80038 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,11n,85p,10411b,454s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss2074.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb>
-Output written on /Users/alexisgramaglia/Desktop/ECOLE/ECOLE/ISIB/Passerelle/SYNTHESE/LABO_ELN_APP/rapport/.texpadtmp/rapport.pdf (5 pages, 216863 bytes).
+Output written on /Users/alexisgramaglia/Desktop/ECOLE/ECOLE/ISIB/Passerelle/SYNTHESE/LABO_ELN_APP/rapport/.texpadtmp/rapport.pdf (6 pages, 272800 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 101 compressed objects within 2 object streams
- 16 named destinations out of 1000 (max. 500000)
- 185 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 195 words of extra memory for PDF output out of 10000 (max. 10000000)
 
