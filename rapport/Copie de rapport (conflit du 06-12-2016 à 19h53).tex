@@ -63,42 +63,61 @@ Comme indiqué sur la figure \ref{schemaEagle}, pour réaliser ce circuit il nou
 	\item un buzzer $\Rightarrow$ BUZZER
 \end{itemize}
 
-\section{Fonctionnement du circuit}
+\chapter{Fonctionnement du circuit}
 
-\subsection{Rôle de la diode D1}
+\section{Rôle de la diode D1}
 \begin{figure}[H]\centering
 \includegraphics[width=1\textwidth]{ressources/roleDiodeD1}
 \caption{Rôle de la diode D1}\end{figure}
 
 Le rôle de la diode D1 est de forcé le courant à passer de la capacité C1 à la diode D2 comme l'indique la flèche orange
-\subsection{Rôle de la diode D2}
+\section{Rôle de la diode D2}
 \begin{figure}[H]\centering
 \includegraphics[width=1\textwidth]{ressources/roleDiodeD2}
 \caption{Rôle de la diode D2}\end{figure}
 
 Le rôle de la diode D2 est forcé le courant à passer dans la résistance R3 comme l'indique la flèche orange.
 
-\subsection{La diode D3}
+\section{La diode D3}
 
 La diode D3 ne sera allumé qu'au moment au le transistor Q2 passera de l'etat bloqué à passant. Ce qui va permet d'avoir un circuit fermé.
 
-\subsection{La diode D4}
+\section{La diode D4}
 
 La diode D4 permet de maintenir une tension positive pour ne pas endommagé le transistor Q1
 
-\subsection{La condensateur C1}
+\section{La condensateur C1}
 
 Le condensateur C1, se charge lorsque l'interrupteur est fermé. Si celui-ci est ouvert alors et le transistor devant passant ce qui implique le condensateur ce décharge.
 
-\subsection{Les résistances R2 et R4}
+\section{Les résistances R2 et R4}
 
 Le transistor ne laisse passer le courant que dans un seul sens : il va donc falloir le polariser pour pouvoir y faire passer du courant. C'est le role des résitances R2 et R4. Elles polarisent respectivements les transistors Q1 et Q2.
 
 La résistances R2 sert à polariser le transistor Q1 et la R4 le transistor Q2.
 
-\section{Résultat}
+\chapter{Résultat}
 
-\section{Amélioration}
+\section{Circuit final}
+
+\begin{figure}[H]\centering
+\includegraphics[width=1\textwidth]{ressources/schema_final}
+\caption{Schéma avec buzzer}
+\label{schemaEagle}\end{figure}
+
+\section{Circuit eagle}
+
+Voici le circuit que sera imprimé sur la carte. Sur laquelle, il nous reste à souder les composants et tester le circuit.
+
+\begin{figure}[H]\centering
+\includegraphics[width=0.5\textwidth]{ressources/schemaBoard}
+\caption{Schéma qui sera imprimé sur la carte}
+\label{schemaBoard}\end{figure}
+
+
+
+
+\chapter{Amélioration}
 
 Pour améliorer le circuit, il faudrait remplacé le buzzer par un vrai réveille. Pour que l'on puisse retirer l'interrupteur et n'avoir plus qu'une seul source d'alimentation
 
