@@ -36,11 +36,13 @@ Nous avons donc cherché la provenance du problème et après réflexion nous en
 \includegraphics[width=0.7\textwidth]{ressources/breadboardElement}
 \caption{Circuit sur breadboard}\end{figure}
 
+
+
 \chapter{Conception du schéma}
 
 Afin de concevoir le schéma électronique de notre circuit nous avons utilisé le logiciel Eagle. Nous avons donc commencé par prendre en main ce logiciel et ensuite créé le schéma.  
 
-Etant donné que Eagle nous produira le schéma qui sera imprimé sur la carte, il était donc important de choisir les bons composants. Ce n'était pas à la caractéristique intrinséque des composants qu'il fallait faire attention mais bien à la dimension de ceux-ci . Nous avons donc créé le schéma de notre circuit électrique en prenant en compte les dimensions de chaque composants. Voici le schéma que nous avons réalisé : 
+Etant donné que Eagle nous produira le schéma qui sera imprimé sur la carte, il était donc important de choisir les bons composants. Ce n'était pas aux caractéristiques intrinsèques des composants qu'il fallait faire attention mais bien aux dimensions de ceux-ci. Nous avons donc créé le schéma de notre circuit électrique en prenant en compte les dimensions de chaque composants. Voici le schéma que nous avons réalisé : 
 
 
 \begin{figure}[H]\centering
@@ -48,43 +50,48 @@ Etant donné que Eagle nous produira le schéma qui sera imprimé sur la carte, 
 \caption{Schéma avec buzzer}
 \label{schemaEagle}\end{figure}
 
-Comme indiqué sur la figure \ref{schemaEagle}, pour réaliser ce circuit il nous a fallut :
+Comme indiqué sur la figure \ref{schemaEagle}, la réalisation de ce circuit a nécessité les composants suivants :
 \begin{itemize}
 	\item une capacité de \textbf{$470 nF$} $\Rightarrow$ C1
 	\item une capacité de \textbf{$220 nF$}  $\Rightarrow$ C2
-	\item 3 diode \textbf{$1N4148$} $\Rightarrow$ D1, D2 et D4
+	\item trois diode \textbf{$1N4148$} $\Rightarrow$ D1, D2 et D4
 	\item une résistance de \textbf{$ 1k\ohm $} $\Rightarrow$ R1
 	\item  une résistance de \textbf{$ 4,7K\ohm $} $\Rightarrow$ R2
 	\item  une résistance de \textbf{$ 6,8K\ohm $} $\Rightarrow$ R3
 	\item une résistance de \textbf{$470\ohm $} $\Rightarrow$ R4
-	\item 2 transistor  \textbf{$2N2222 $} $\Rightarrow$ Q1 et Q2
-	\item un led $\Rightarrow$ D3
-	\item une interrupteur $\Rightarrow$ SWITCH
+	\item deux transistor  \textbf{$2N2222 $} $\Rightarrow$ Q1 et Q2
+	\item une led $\Rightarrow$ D3
+	\item un interrupteur $\Rightarrow$ SWITCH
 	\item un buzzer $\Rightarrow$ BUZZER
 \end{itemize}
 
+
+
 \chapter{Fonctionnement du circuit}
 
-\section{Rôle de la diode D1}
+\section{La diode D1}
+
 \begin{figure}[H]\centering
 \includegraphics[width=1\textwidth]{ressources/roleDiodeD1}
 \caption{Rôle de la diode D1}\end{figure}
 
-Le rôle de la diode D1 est de forcé le courant à passer de la capacité C1 à la diode D2 comme l'indique la flèche orange
-\section{Rôle de la diode D2}
+Le rôle de la diode D1 est de forcer le courant à passer de la capacité C1 à la diode D2 comme l'indique la flèche orange.
+
+\section{La diode D2 et la résistance R3}
+
 \begin{figure}[H]\centering
 \includegraphics[width=1\textwidth]{ressources/roleDiodeD2}
 \caption{Rôle de la diode D2}\end{figure}
 
-Le rôle de la diode D2 est forcé le courant à passer dans la résistance R3 comme l'indique la flèche orange.
+Le rôle de la diode D2 est de forcer le courant à passer dans la résistance R3 comme l'indique la flèche orange. Tandis que la résistance R3 est présente afin de limiter le courant entrant dans le transistor Q2 dans le but de ne pas l'endommager.
 
 \section{La diode D3}
 
-La diode D3 ne sera allumé qu'au moment au le transistor Q2 passera de l'etat bloqué à passant. Ce qui va permet d'avoir un circuit fermé.
+La diode D3 ne sera allumée qu'au moment ou le transistor Q2 passera de l'état bloqué à passant. Ce qui va permet d'avoir un circuit fermé étant donné que le transistor Q2 est utilisé comme un interrupteur dans ce circuit.
 
 \section{La diode D4}
 
-La diode D4 permet de maintenir une tension positive pour ne pas endommagé le transistor Q1
+La diode D4 permet de maintenir une tension positive pour ne pas endommager le transistor Q1.
 
 \section{La condensateur C1}
 
@@ -92,40 +99,42 @@ Le condensateur C1, se charge lorsque l'interrupteur est fermé. Si celui-ci est
 
 \section{Les résistances R2 et R4}
 
-Le transistor ne laisse passer le courant que dans un seul sens : il va donc falloir le polariser pour pouvoir y faire passer du courant. C'est le role des résitances R2 et R4. Elles polarisent respectivements les transistors Q1 et Q2.
+Le transistor ne laisse passer le courant que dans un seul sens : il va donc falloir le polariser pour pouvoir y faire passer du courant. C'est le rôle des résistances R2 et R4. Elles polarisent respectivement les transistors Q1 et Q2.
 
-La résistances R2 sert à polariser le transistor Q1 et la R4 le transistor Q2.
+La résistance R2 sert à polariser le transistor Q1 et la R4 le transistor Q2.
 
 \chapter{Résultat}
 
 
 \section{Circuit eagle}
 
-Voici le circuit que sera imprimé sur la carte. Sur laquelle, il nous reste à souder les composants et tester le circuit.
+Voici le circuit que produit par le logiciel Eagle qui a été imprimé sur la carte. Carte sur laquelle il ne nous reste qu'à souder les composants et tester le circuit.
 
 \begin{figure}[H]\centering
 \includegraphics[width=0.8\textwidth]{ressources/schemaBoard}
-\caption{Schéma qui sera imprimé sur la carte}
+\caption{Schéma qui imprimé sur la carte}
 \label{schemaBoard}\end{figure}
 
 \section{Circuit soudé}
 
 \begin{figure}[H]\centering
 \includegraphics[width=0.5\textwidth]{ressources/carteSouderC}
-\caption{Circuit vu de la face avant avec les composants soudés}
+\caption{Vue de face de la carte après soudure}
 \label{schemaBoard}\end{figure}
 
 
 \begin{figure}[H]\centering
 \includegraphics[width=0.8\textwidth]{ressources/soudure}
-\caption{Circuit vu de la face arrière avec les composants soudés}
+\caption{Vue arrière de la carte après soudure}
 \label{schemaBoard}\end{figure}
 
+\section{Fonctionnement du circuit}
 
+Après avoir soudé tout nos composants sur notre circuit et vérifié qu'aucun court-circuit n'était présent, nous avons alimenté notre circuit avec une alimentation de 3$V$, dédiée au buzzer, et une deuxième de 9$V$ pour le reste du circuit. Ensuite nous avons activé le buzzer grâce à l'interrupteur, lorsque nous relâchons ce dernier, on peut observer que la Led se déclenche. Notre circuit fonctionne donc correctement.
 
 \chapter{Amélioration}
 
-Pour améliorer le circuit, il faudrait remplacé le buzzer par un vrai réveille. Pour que l'on puisse retirer l'interrupteur et n'avoir plus qu'une seul source d'alimentation
+Afin d'améliorer le circuit, nous devrions remplacer le buzzer et l'interrupteur par un réveil afin de venir récupérer les impulsions électroniques envoyées par le transducteur du réveil. De ce fait nous n'aurions plus qu'une seule alimentation de 9$V$ pour notre circuit.
 
 \end{document}
 
